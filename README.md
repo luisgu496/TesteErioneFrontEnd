@@ -99,3 +99,5 @@ Licenciado sob a MIT License
 
 ---
 
+## ✍ Autor
+Desenvolvido por Luis Gustavo Ferreira Leite  🚀
