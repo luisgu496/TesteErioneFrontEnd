@@ -29,10 +29,7 @@ kotlin-user-app/
 │ ├── gradle-wrapper.jar   
 │ └── gradle-wrapper.properties   
 │   
-├── src/   
-│ └── main/   
-│  └── kotlin/    
-│   └── app/  # Código Kotlin do projeto  
+├── src/ main/ kotlin/ app/  # Código Kotlin do projeto    
 │   ├── Main.kt # Ponto de entrada da aplicação   
 │   ├── FormPage.kt  
 │   └── List Page.kt   
