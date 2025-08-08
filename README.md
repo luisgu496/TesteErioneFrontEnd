@@ -17,80 +17,85 @@ Aplicação **Kotlin/JS + React** para o teste de front-end — cadastro simples
 
 ##  📂 Estrutura do projeto
 
-kotlin-user-app/
-├── gradle/ # Arquivos internos do Gradle  
-│ └── wrapper/  
-│ ├── gradle-wrapper.jar  
-│ └── gradle-wrapper.properties  
-│  
+kotlinjs_user_app/  
+├── build.gradle.kts # Configuração Gradle (Kotlin Multiplatform / JS)  
+├── settings.gradle.kts # Nome do root project  
+├── index.html # Página principal (carrega bundle gerado)  
+├── styles.scss # Estilos (SCSS) — importável no build  
 ├── src/  
 │ └── main/  
-│ ├── kotlin/ # Código Kotlin do projeto  
-│ │ ├── App.kt # Componente principal React  
-│ │ ├── Main.kt # Ponto de entrada da aplicação  
-│ │ ├── components/ # Componentes React reutilizáveis  
-│ │ │ ├── Form.kt  
-│ │ │ ├── UserList.kt  
-│ │ │ └── UserItem.kt  
-│ │ └── models/ # Modelos de dados  
-│ │ └── User.kt  
-│ │  
-│ ├── resources/ # Arquivos estáticos  
-│ │ ├── index.html  
-│ │ └── styles.css  
-│  
-├── .gitignore # Arquivos e pastas ignorados pelo Git  
-├── build.gradle.kts # Configuração do Gradle e plugins  
-├── gradlew # Script Unix para rodar o Gradle Wrapper  
-├── gradlew.bat # Script Windows para rodar o Gradle Wrapper  
-└── README.md # Documentação do projeto  
-
+│ └── kotlin/  
+│ └── app/  
+│ ├── Main.kt # Ponto de entrada  
+│ ├── FormPage.kt # Componente do formulário  
+│ └── ListPage.kt # Componente de listagem  
+└── README.md # (este arquivo — documentação)  
 
 ---
 
-## 🛠️ Como Executar Localmente
-
-### 1️⃣ Pré-requisitos
-- **Java JDK 17+**
-- **Gradle**
-- Navegador moderno (Chrome, Edge, Firefox...)
+## 🔧 Pré-requisitos
+- **Java JDK 17+** (obrigatório)
+- **Gradle** (opcional — se não tiver, você pode gerar o *wrapper* local com `gradle wrapper`)
+- Navegador moderno (Chrome, Edge, Firefox)
 
 ---
 
-### 2️⃣ Clonar o repositório
+## 🚀 Como executar (modo recomendado — usando Gradle)
+
+1. Abra o terminal na raiz do projeto (`kotlinjs_user_app/`).
+
+---
+
+2. (Opcional — só se você não tiver o wrapper) Gere o wrapper:
 ```bash
-git clone https://github.com/luisgu496/TesteErioneFrontEnd/tree/main
-cd kotlin-user-app
+gradle wrapper
 ```
 
 ---
 
-### 3️⃣ Limpar e preparar o projeto
+3. Limpe (opcional, mas recomendado):
 ```bash
-./gradlew clean
+# Windows (PowerShell / CMD)
+gradlew.bat clean
 ```
 
 ---
 
-### 4️⃣ Rodar o projeto no navegador
+4. Rode em modo de desenvolvimento:
+
+
+Se o seu build estiver baseado no plugin antigo kotlin("js"):
 ```bash
 ./gradlew jsBrowserDevelopmentRun
 ```
 
-Após compilar, o Gradle abrirá automaticamente o projeto no seu navegador.
+Se o seu build estiver configurado como Kotlin Multiplatform (js target):
+```bash
+./gradlew browserDevelopmentRun
+```
+
+Após compilar, o terminal geralmente informa o endereço (por exemplo http://localhost:8080 ou http://localhost:5173) — abra esse endereço no navegador.
 
 ---
 
-## 📦 Build de Produção
+## 📦 Gerar build de produção
 
-Para gerar os arquivos otimizados:
-
+# geração do bundle otimizado
 ```bash
 ./gradlew jsBrowserProductionWebpack
 ```
-Arquivos otimizados serão colocados em:
 
+Arquivos otimizados serão colocados em:
 ```bash
 build/distributions/
 ```
+Você pode então servir esses arquivos com qualquer servidor estático (Nginx, Apache, etc.).
+
+---
+
+## 📜 Licença
+
+Licenciado sob a MIT License 
+
+---
 
