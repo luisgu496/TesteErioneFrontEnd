@@ -80,7 +80,7 @@ Após compilar, o terminal geralmente informa o endereço (por exemplo http://lo
 
 ## 📦 Gerar build de produção
 
-# geração do bundle otimizado
+Geração do bundle otimizado
 ```bash
 ./gradlew jsBrowserProductionWebpack
 ```
