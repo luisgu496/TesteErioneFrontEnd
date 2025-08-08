@@ -1,46 +1,49 @@
-# 🖥️ Kotlin User App
+# 🖥️ Kotlin User App (Kotlin/JS + React)
 
-Aplicação **Fullstack Kotlin + React** (Kotlin/JS) para gerenciamento de usuários, com funcionalidades de **CRUD** (Criar, Listar, Editar e Excluir) e execução diretamente no navegador.
-
----
-
-## 🚀 Tecnologias Utilizadas
-- **Kotlin/JS (IR Compiler)** — Desenvolvimento front-end em Kotlin compilado para JavaScript.
-- **React** — Biblioteca para construção de interfaces interativas.
-- **Gradle** — Automação de build e gerenciamento de dependências.
-- **Webpack** — Empacotamento e otimização do código para o navegador.
+Aplicação **Kotlin/JS + React** para o teste de front-end — cadastro simples de usuários (Nome, CPF, Telefone, Email) com validação, edição, exclusão e **persistência em `localStorage`**.
 
 ---
 
-## 📋 Funcionalidades
-- Cadastro de usuários com validação.
-- Listagem de usuários cadastrados.
-- Edição de dados de usuários.
-- Exclusão de registros.
-- Interface amigável e responsiva.
+## ✅ Principais requisitos atendidos
+- Duas páginas (Formulário e Lista) — navegação por hash (`#/form`, `#/list`).
+- Campos: Nome completo, CPF, Telefone, Email.
+- Operações: Criar, Listar, Editar e Excluir.
+- Validações básicas (CPF 11 dígitos, Telefone 10–11 dígitos, Email com `@`).
+- Persistência local em `localStorage`, com 3 usuários iniciais.
+- Estilos (SCSS) seguindo o guia de cores fornecido.
+- Código em Kotlin (Kotlin/JS) usando wrappers React.
 
 ---
 
-## 📂 Estrutura do Projeto
+##  📂 Estrutura do projeto
 
-kotlin-user-app/   
-├── gradle/ # Arquivos internos do Gradle   
-│ └── wrapper/   
-│ ├── gradle-wrapper.jar   
-│ └── gradle-wrapper.properties   
-│   
-├── src/ main/ kotlin/ app/  # Código Kotlin do projeto    
-│   ├── Main.kt # Ponto de entrada da aplicação   
-│   ├── FormPage.kt  
-│   └── List Page.kt   
-│   
-├── build.gradle.kts # Configuração do Gradle e plugins   
-├── settings.gradle.kts  
-├── index.html  
-├── gradlew # Script Unix para rodar o Gradle Wrapper     
-├── gradlew.bat # Script Windows para rodar o Gradle Wrapper   
-├── styles.scss  
-└── README.md # Documentação do projeto   
+kotlin-user-app/
+├── gradle/ # Arquivos internos do Gradle  
+│ └── wrapper/  
+│ ├── gradle-wrapper.jar  
+│ └── gradle-wrapper.properties  
+│  
+├── src/  
+│ └── main/  
+│ ├── kotlin/ # Código Kotlin do projeto  
+│ │ ├── App.kt # Componente principal React  
+│ │ ├── Main.kt # Ponto de entrada da aplicação  
+│ │ ├── components/ # Componentes React reutilizáveis  
+│ │ │ ├── Form.kt  
+│ │ │ ├── UserList.kt  
+│ │ │ └── UserItem.kt  
+│ │ └── models/ # Modelos de dados  
+│ │ └── User.kt  
+│ │  
+│ ├── resources/ # Arquivos estáticos  
+│ │ ├── index.html  
+│ │ └── styles.css  
+│  
+├── .gitignore # Arquivos e pastas ignorados pelo Git  
+├── build.gradle.kts # Configuração do Gradle e plugins  
+├── gradlew # Script Unix para rodar o Gradle Wrapper  
+├── gradlew.bat # Script Windows para rodar o Gradle Wrapper  
+└── README.md # Documentação do projeto  
 
 
 ---
@@ -59,31 +62,34 @@ kotlin-user-app/
 git clone https://github.com/seu-usuario/kotlin-user-app.git
 cd kotlin-user-app
 ```
+
 ---
 
 ### 3️⃣ Limpar e preparar o projeto
 ```bash
 ./gradlew clean
 ```
+
 ---
 
 ### 4️⃣ Rodar o projeto no navegador
 ```bash
 ./gradlew jsBrowserDevelopmentRun
 ```
+
+Após compilar, o Gradle abrirá automaticamente o projeto no seu navegador.
+
 ---
 
 ## 📦 Build de Produção
 
 Para gerar os arquivos otimizados:
+
 ```bash
 ./gradlew jsBrowserProductionWebpack
 ```
 
-Os arquivos finais estarão na pasta:
 ```bash
-build/distributions/
+./gradlew jsBrowserProductionWebpack
 ```
----
 
-## 
