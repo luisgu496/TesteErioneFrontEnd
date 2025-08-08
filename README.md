@@ -4,7 +4,7 @@ Aplicação **Kotlin/JS + React** para o teste de front-end — cadastro simples
 
 ---
 
-## ✅ Principais requisitos atendidos
+## 🚀 Funcionalidade
 - Duas páginas (Formulário e Lista) — navegação por hash (`#/form`, `#/list`).
 - Campos: Nome completo, CPF, Telefone, Email.
 - Operações: Criar, Listar, Editar e Excluir.
@@ -52,14 +52,14 @@ kotlin-user-app/
 
 ### 1️⃣ Pré-requisitos
 - **Java JDK 17+**
-- **Gradle** (opcional, pois o wrapper `gradlew` já está incluso)
+- **Gradle**
 - Navegador moderno (Chrome, Edge, Firefox...)
 
 ---
 
 ### 2️⃣ Clonar o repositório
 ```bash
-git clone https://github.com/seu-usuario/kotlin-user-app.git
+git clone https://github.com/luisgu496/TesteErioneFrontEnd/tree/main
 cd kotlin-user-app
 ```
 
@@ -88,8 +88,9 @@ Para gerar os arquivos otimizados:
 ```bash
 ./gradlew jsBrowserProductionWebpack
 ```
+Arquivos otimizados serão colocados em:
 
 ```bash
-./gradlew jsBrowserProductionWebpack
+build/distributions/
 ```
 
