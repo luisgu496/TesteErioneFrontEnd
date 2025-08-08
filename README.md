@@ -39,6 +39,7 @@ kotlin-user-app/
 ├── index.html  
 ├── gradlew # Script Unix para rodar o Gradle Wrapper     
 ├── gradlew.bat # Script Windows para rodar o Gradle Wrapper   
+├── styles.scss  
 └── README.md # Documentação do projeto   
 
 
