@@ -32,15 +32,15 @@ kotlin-user-app/
 ├── src/   
 │ └── main/   
 │  └── kotlin/    
-│   └── app/  # Código Kotlin do projeto
+│   └── app/  # Código Kotlin do projeto  
 │   ├── Main.kt # Ponto de entrada da aplicação   
 │   ├── FormPage.kt  
 │   └── List Page.kt   
 │   
 ├── build.gradle.kts # Configuração do Gradle e plugins   
-├── settings.gradle.kts
-├── index.html
-├── gradlew # Script Unix para rodar o Gradle Wrapper   
+├── settings.gradle.kts  
+├── index.html  
+├── gradlew # Script Unix para rodar o Gradle Wrapper     
 ├── gradlew.bat # Script Windows para rodar o Gradle Wrapper   
 └── README.md # Documentação do projeto   
 
