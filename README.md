@@ -31,22 +31,15 @@ kotlin-user-app/
 │   
 ├── src/   
 │ └── main/   
-│ ├── kotlin/ # Código Kotlin do projeto   
-│ │ ├── App.kt # Componente principal React   
-│ │ ├── Main.kt # Ponto de entrada da aplicação   
-│ │ ├── components/ # Componentes React reutilizáveis   
-│ │ │ ├── Form.kt   
-│ │ │ ├── UserList.kt   
-│ │ │ └── UserItem.kt   
-│ │ └── models/ # Modelos de dados   
-│ │ └── User.kt   
-│ │   
-│ ├── resources/ # Arquivos estáticos   
-│ │ ├── index.html   
-│ │ └── styles.css   
+│  └── kotlin/    
+│   └── app/  # Código Kotlin do projeto
+│   ├── Main.kt # Ponto de entrada da aplicação   
+│   ├── FormPage.kt  
+│   └── List Page.kt   
 │   
-├── .gitignore # Arquivos e pastas ignorados pelo Git   
 ├── build.gradle.kts # Configuração do Gradle e plugins   
+├── settings.gradle.kts
+├── index.html
 ├── gradlew # Script Unix para rodar o Gradle Wrapper   
 ├── gradlew.bat # Script Windows para rodar o Gradle Wrapper   
 └── README.md # Documentação do projeto   
